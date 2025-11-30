@@ -41,7 +41,7 @@
             background-color: #F7D9D9; /* custom-soft */
             
             position: relative; 
-            overflow: hidden;
+            overflow-y: auto;
         }
         
         /* Custom button styling for hover effects */
@@ -473,7 +473,7 @@
                 const tile = document.createElement('div');
                 // Use the word itself as a key/id for easier tracking, since we shuffle
                 tile.id = `word-tile-${item.word.replace(/\s/g, '-')}`; 
-                tile.className = `word-tile bg-white text-gray-800 p-2 rounded-xl text-center text-sm font-semibold transition-all duration-150 shadow`;
+                tile.className = `word-tile bg-white text-gray-800 p-2 rounded-xl text-center text-sm sm:text-base font-semibold transition-all duration-150 shadow`;
                 tile.textContent = item.word;
                 tile.addEventListener('click', () => handleWordClick(item.word, tile));
                 
@@ -749,4 +749,5 @@
     </script>
 </body>
 </html>
+
 
