@@ -62,7 +62,8 @@
             user-select: none;
             border-bottom: 4px solid rgba(0, 0, 0, 0.1);
 
-            font-size: clamp(0.7rem, 2vw, 1rem); 
+            font-size: clamp(0.7rem, 2vw, 1rem) !important;
+            text-align: center;
         }
         .word-tile:hover:not(.selected):not(.guessed) {
             background-color: #fcebeb; /* Lighter soft pink on hover */
@@ -475,7 +476,7 @@
                 const tile = document.createElement('div');
                 // Use the word itself as a key/id for easier tracking, since we shuffle
                 tile.id = `word-tile-${item.word.replace(/\s/g, '-')}`; 
-                tile.className = `word-tile bg-white text-gray-800 p-2 rounded-xl text-center text-sm sm:text-base font-semibold transition-all duration-150 shadow`;
+                tile.className = `word-tile bg-white text-gray-800 p-2 rounded-xl font-semibold shadow`;
                 tile.textContent = item.word;
                 tile.addEventListener('click', () => handleWordClick(item.word, tile));
                 
@@ -751,6 +752,7 @@
     </script>
 </body>
 </html>
+
 
 
 
